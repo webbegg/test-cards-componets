@@ -6,18 +6,23 @@
 
 body {
   background-color: #f2f2f2;
-  display: flex;
-  flex-direction: row;
   font-family: 'Montserrat', sans-serif;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+}
+
+#stack {
+  flex: 1;
 }
 
 #playzone {
+	position:relative;
+  display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
 
-  .card {
-    margin-left: -1rem;
-  }
+.card {
+  float:right;
+  margin-left: -100px;
+  position: relative;
 }
 
