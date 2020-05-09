@@ -14,17 +14,27 @@ body {
   align-items: flex-end;
 }
 
+#dropzone {
+  background-color: #111;
+  border-radius: 32px;
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  top: 50px;
+}
+
 #playzone {
 	position:relative;
   display:flex;
 	flex-wrap:wrap;
+  align-items: flex-start;
 	justify-content:space-around;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   margin-left: 50px;
+  height: 100px;
 }
 
 .card {
-  align-self: flex-start;
   margin-left: -30px;
 }
 

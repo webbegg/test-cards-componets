@@ -1,4 +1,4 @@
-import runoxCard from '../../assets/card.svg'
+import gsab from 'gsap'
 
 import './style.scss';
 
@@ -32,10 +32,15 @@ export enum CardValue {
   WILD_DRAW_FOUR = "WILD_DRAW_FOUR",
 }
 
+const getRand = (min,max) => {
+  return Math.random() * (max - min) + min;
+}
+
 export class Card {
   containerDiv: HTMLElement
   cardDiv: HTMLElement
   imageBackground: string
+
 
   constructor(
     private container: string,
@@ -50,8 +55,23 @@ export class Card {
     this.cardDiv = document.createElement('div');
     this.cardDiv.className = 'card'
 
+    const dropzone = document.getElementById('dropzone')
+
+    this.cardDiv.addEventListener('click', (event) => {
+      this.cardDiv.style.position = 'fixed'
+      this.cardDiv.style.zIndex = (dropzone.childNodes.length +10).toString()
+      const bcr = this.cardDiv.getBoundingClientRect()
+
+      console.log(this.cardDiv.style.zIndex)
+
+      gsab.to(this.cardDiv, .3, {
+        x: 0,
+        y: (bcr.top - 90) * -1,
+        rotate: getRand(-75, 75)
+      })
+    })
+
     // @TODO check properties values
-    
   }
 
   getCardColor():string {
