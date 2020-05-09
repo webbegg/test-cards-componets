@@ -40,6 +40,7 @@ export class Card {
   containerDiv: HTMLElement
   cardDiv: HTMLElement
   imageBackground: string
+  zIndex: number = 0
 
 
   constructor(
@@ -59,7 +60,6 @@ export class Card {
 
     this.cardDiv.addEventListener('click', (event) => {
       this.cardDiv.style.position = 'fixed'
-      this.cardDiv.style.zIndex = (dropzone.childNodes.length +10).toString()
       const bcr = this.cardDiv.getBoundingClientRect()
 
       console.log(this.cardDiv.style.zIndex)
