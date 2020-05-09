@@ -1,0 +1,70 @@
+.card {
+  background-color: #f2f2f2;
+  border: .49rem solid white;
+  border-radius: .32rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .13);
+  height: 240px;
+  display: inline-block;
+  transition: .28s ease-in-out all;
+  padding: 1rem;
+  position: relative;
+  width: 160px;
+  margin-left: -100px;
+
+  &:hover {
+    transform: translateY(-1.5rem);
+    // z-index: 2147483647;
+  }
+
+  /** values */
+  .card__value {
+    position: absolute;
+    left: .32em;
+    top: .32em;
+    height: 1.42em;
+    width: 1.42em;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /** colors */
+  &.card__red { 
+    background-color: darkred; 
+    color: white;  
+
+    .card__value {
+      background-color: red;
+    }
+  }
+
+  &.card__blue { 
+    background-color: darkblue; 
+    color: white;  
+
+    .card__value {
+      background-color: blue;
+    }
+  }
+
+  &.card__green { 
+    background-color: darkgreen; 
+    color: white;  
+
+    .card__value {
+      background-color: green;
+    }
+  }
+
+  &.card__yellow { 
+    background-color: yellow; 
+    color: black;  
+
+    .card__value {
+      background-color: yellowgreen;
+    }
+  }
+
+}
