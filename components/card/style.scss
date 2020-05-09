@@ -1,69 +1,68 @@
 .card {
-  background-color: #f2f2f2;
-  border: .49rem solid white;
-  border-radius: .32rem;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .13);
-  height: 240px;
+  height: 308px;
   display: inline-block;
   transition: .28s ease-in-out all;
-  padding: 1rem;
   position: relative;
-  width: 160px;
   margin-left: -100px;
+  width: 208px;
 
   &:hover {
     transform: translateY(-1.5rem);
-    // z-index: 2147483647;
+  }
+
+  /** image */
+  &__image {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   /** values */
   .card__value {
+    font-weight: 600;
     position: absolute;
-    left: .32em;
-    top: .32em;
-    height: 1.42em;
-    width: 1.42em;
-    border-radius: 50%;
-    font-size: 1.2rem;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 124px;
   }
 
   /** colors */
-  &.card__red { 
-    background-color: darkred; 
+  &__red { 
     color: white;  
 
     .card__value {
-      background-color: red;
+      color: red;
     }
   }
 
-  &.card__blue { 
-    background-color: darkblue; 
+  &__blue { 
+    color: darkblue;
+
+    .card__value {
+      color: blue;
+    }
+  }
+
+  &__green { 
     color: white;  
 
     .card__value {
-      background-color: blue;
+      color: green;
     }
   }
 
-  &.card__green { 
-    background-color: darkgreen; 
-    color: white;  
-
-    .card__value {
-      background-color: green;
-    }
-  }
-
-  &.card__yellow { 
-    background-color: yellow; 
+  &__yellow { 
     color: black;  
 
     .card__value {
-      background-color: yellowgreen;
+      color: yellowgreen;
     }
   }
 

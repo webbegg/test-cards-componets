@@ -4,5 +4,5 @@ import './style.scss'
 
 const container = document.getElementById('playzone')
 
-const card = new Card('playzone', CardColor.BLUE, CardValue.EIGHT);
+const card = new Card('playzone', CardColor.BLUE, CardValue.ONE);
 card.render()

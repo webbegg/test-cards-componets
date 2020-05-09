@@ -1,5 +1,8 @@
+import runoxCard from '../../assets/card.svg'
 
 import './style.scss';
+
+const backgroundImage = 'Cjxzdmcgdmlld0JveD0iMCAwIDIwOCAzMDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNzAuNjY3IDBIMzcuMzMzQzE4LjkyNCAwIDQgMTQuOTI0IDQgMzMuMzMzdjIzMy4zMzRDNCAyODUuMDc2IDE4LjkyNCAzMDAgMzcuMzMzIDMwMGgxMzMuMzM0QzE4OS4wNzYgMzAwIDIwNCAyODUuMDc2IDIwNCAyNjYuNjY3VjMzLjMzM0MyMDQgMTQuOTI0IDE4OS4wNzYgMCAxNzAuNjY3IDB6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNMTcwLjY2NyAxNi42NjdIMzcuMzM0Yy05LjIwNSAwLTE2LjY2NyA3LjQ2Mi0xNi42NjcgMTYuNjY2djIzMy4zMzRjMCA5LjIwNCA3LjQ2MiAxNi42NjYgMTYuNjY3IDE2LjY2NmgxMzMuMzMzYzkuMjA1IDAgMTYuNjY3LTcuNDYyIDE2LjY2Ny0xNi42NjZWMzMuMzMzYzAtOS4yMDQtNy40NjItMTYuNjY2LTE2LjY2Ny0xNi42NjZ6IiBmaWxsPSJjdXJyZW50Y29sb3IiLz48cGF0aCBkPSJNMTUzLjk5OSA2Ni42NjZDODAuMzYxIDY2LjY2NiAyMC42NjYgMTI2LjM2MiAyMC42NjYgMjAwYzAgMTguNDA5IDE0LjkyNCAzMy4zMzMgMzMuMzMzIDMzLjMzMyA3My42MzggMCAxMzMuMzM0LTU5LjY5NSAxMzMuMzM0LTEzMy4zMzMgMC0xOC40MS0xNC45MjQtMzMuMzM0LTMzLjMzNC0zMy4zMzR6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTE1My45OTkgNjYuNjY2Yy01NS45NCAwLTEwMy43NTIgMzQuNDkxLTEyMy41NDEgODMuMzM0LTYuMjYxIDE1LjQ1MS05Ljc5MiAzMi4zMDMtOS43OTIgNTAgMCAxOC40MDkgMTQuOTI0IDMzLjMzMyAzMy4zMzMgMzMuMzMzIDU1Ljk0MSAwIDEwMy43NTItMzQuNDkxIDEyMy41NDItODMuMzMzIDYuMjYxLTE1LjQ1MiA5Ljc5Mi0zMi4zMDMgOS43OTItNTAgMC0xOC40MS0xNC45MjQtMzMuMzM0LTMzLjMzNC0zMy4zMzR6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNCIvPjwvc3ZnPg=='
 
 export enum CardColor {
   RED = "RED",
@@ -73,8 +76,10 @@ export class Card {
     this.cardDiv.classList.add(this.getCardColor());
     
     const background = document.createElement('img')
-    background.src = '/assets/card.svg'
-    this.containerDiv.appendChild(background)
+    // background.src = `data:image/svg+xml;base64,${backgroundImage}`
+    background.src = runoxCard
+    background.className = 'card__image'
+    this.cardDiv.appendChild(background)
 
     const valueContainer = document.createElement('div');
     valueContainer.className = 'card__value';
